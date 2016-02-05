@@ -50,27 +50,6 @@
           //}-
           //}
 
-          //if (response.data.status === '00') {
-          //  userObj = {
-          //    status: response.data.status,
-          //    messsage: response.data.message,
-          //    responseObject: {
-          //      userName: response.data.responseObject.userName,
-          //      toKen: response.data.responseObject.toKen,
-          //      lastLoginTime: response.data.responseObject.lastLoginTime,
-          //      deviceId: response.data.responseObject.deviceId
-          //    }
-          //  };
-          //
-          //  //console.info(JSON.stringify(userObj));
-          //  //alert('Welcome,' + userObj.responseObject.userName + '\n Token=' + userObj.responseObject.toKen);
-          //}
-          //else {
-          //
-          //  alert('' + response.data.messsage+'\nPlease Retry');
-          //
-          //
-          //}
           deferred.resolve(response.data);
         }
         ,

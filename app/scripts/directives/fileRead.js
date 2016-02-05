@@ -34,7 +34,8 @@ directive("fileRead", fileRead);
             console.log("headerNames="+JSON.stringify(headerNames));
             console.log("data = "+data);
             var data = XLSX.utils.sheet_to_json( workbook.Sheets[workbook.SheetNames[0]]);
-
+            $scope.contactList = [];
+            $scope.contactList = JSON.stringify(data);
             console.info("JSON Data =\n\n"+JSON.stringify(data));
             //$scope.opts.columnDefs = [];
             headerNames.forEach(function (h) {
