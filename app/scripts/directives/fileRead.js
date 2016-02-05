@@ -4,7 +4,7 @@
 //didn't make this an anonymous function.
 (
   function(){
-    //'use strict';
+    'use strict';
 angular
   .module('helloWorldAngularApp').
 directive("fileRead", fileRead);
@@ -32,16 +32,19 @@ directive("fileRead", fileRead);
             )[0];
 
             console.log("headerNames="+JSON.stringify(headerNames));
+            console.log("data = "+data);
             var data = XLSX.utils.sheet_to_json( workbook.Sheets[workbook.SheetNames[0]]);
 
-            $scope.opts.columnDefs = [];
+            console.info("JSON Data =\n\n"+JSON.stringify(data));
+            //$scope.opts.columnDefs = [];
             headerNames.forEach(function (h) {
-              $scope.opts.columnDefs.push({ field: h });
+              //$scope.opts.columnDefs.push({ field: h });
+              console.log("h="+h);
             });
 
-            $scope.opts.data = data;
+            //$scope.opts.data = data;
 
-            $elm.val(null);
+            //$elm.val(null);
           });
         };
 
