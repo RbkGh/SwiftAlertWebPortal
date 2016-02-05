@@ -9,13 +9,14 @@
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css"/>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" type="text/css">
     <!-- endbuild -->
   </head>
-  <body ng-app="helloWorldAngularApp">
+  <body ng-app="helloWorldAngularApp" >
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -53,21 +54,8 @@
     <div ng-view=""></div>
     </div>
 
-    <div id="footer" class="footer">
-      <div class="container" style="padding-top:15px; padding-bottom: 15px;">
-        <div class="row" id="bottomLinks">
-          <div class="col-xs-12 col-sm-8 col-md-8" id="bottomMenu">
 
-            <div style="margin-top: 10px;">
-              <div id="copyright" style="text-align: start !important;">
-                <span class="glyphicon glyphicon-heart"></span> from SwiftPot</p>
-                <!--© 2016 -SwiftPot-->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!--<div class="footer">-->
       <!--<div class="container">-->
         <!--<p><span class="glyphicon glyphicon-heart"></span> from SwiftPot</p>-->
@@ -97,15 +85,27 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
+
+
+
+    <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+    <script src="bower_components/js-xlsx/dist/ods.js"></script>
+    <script src="bower_components/js-xlsx/dist/xlsx.full.min.js"></script>
+    <!--remember to load css differently using link tag-->
+
+
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/MainCtrl.js"></script>
     <script src="scripts/controllers/about.js"></script>
     <script src="scripts/controllers/LoginController.js"></script>
 
     <!-- endbuild -->
+    <!-- load directives-->
+    <script src="scripts/directives/fileRead.js"></script>
+    <!-- load directives-->
 
     <!--Load Services-->
     <script src="scripts/services/FlashService.js"></script>

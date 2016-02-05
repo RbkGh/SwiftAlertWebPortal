@@ -15,7 +15,8 @@ var app = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.grid'
   ]);
 app.config(['$sceDelegateProvider', function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
@@ -41,7 +42,7 @@ app.config(function ($routeProvider) {
         {
           templateUrl: 'partials/main.html',
           controller: 'MainCtrl',
-          controllerAs: 'main'
+          controllerAs: 'vm'
         })
       .when('/about',
         {

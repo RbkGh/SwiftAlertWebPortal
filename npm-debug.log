@@ -10788,8 +10788,8 @@
 199330 silly gunzTarPerm modified mode [ 'lib/node_modules/md5-o-matic/.travis.yml', 420, 438 ]
 199331 silly gunzTarPerm extractEntry lib/node_modules/md5-o-matic/lib/md5omatic.js
 199332 silly gunzTarPerm modified mode [ 'lib/node_modules/md5-o-matic/lib/md5omatic.js', 420, 438 ]
-199333 silly gunzTarPerm extractEntry lib/node_modules/md5-o-matic/test/main.js
-199334 silly gunzTarPerm modified mode [ 'lib/node_modules/md5-o-matic/test/main.js', 420, 438 ]
+199333 silly gunzTarPerm extractEntry lib/node_modules/md5-o-matic/test/MainCtrl.js
+199334 silly gunzTarPerm modified mode [ 'lib/node_modules/md5-o-matic/test/MainCtrl.js', 420, 438 ]
 199335 silly gunzTarPerm extractEntry lib/node_modules/mime/package.json
 199336 silly gunzTarPerm modified mode [ 'lib/node_modules/mime/package.json', 420, 438 ]
 199337 silly gunzTarPerm extractEntry lib/node_modules/mime/.npmignore
