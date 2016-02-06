@@ -31,13 +31,17 @@ directive("fileRead", fileRead);
               { header: 1 }
             )[0];
 
-            console.log("headerNames="+JSON.stringify(headerNames));
-            console.log("data = "+data);
+
             var data = XLSX.utils.sheet_to_json( workbook.Sheets[workbook.SheetNames[0]]);
-            $scope.contactList = [];
-            $scope.contactList = JSON.stringify(data);
+            //$scope.contactList = [];
+            //$scope.contactList = JSON.stringify(data);
             console.info("JSON Data =\n\n"+JSON.stringify(data));
             //$scope.opts.columnDefs = [];
+            var arrayOfContacts = JSON.stringify(data);
+            var index;
+            for	(index = 0; index < arrayOfContacts.length; index++) {
+              $scope.contactsListRaw.push(arrayOfContacts[index]);
+            }
             headerNames.forEach(function (h) {
               //$scope.opts.columnDefs.push({ field: h });
               console.log("h="+h);
