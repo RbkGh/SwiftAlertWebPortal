@@ -6,7 +6,7 @@
  * Controller of the helloWorldAngularApp
  */
 (function () {
-    'use strict';
+    //'use strict';
     angular.
     module('helloWorldAngularApp').
     controller('MainCtrl', MainCtrl);
@@ -18,7 +18,10 @@
       vm.tokenId ='7DF7E7A5-631F-4550-913D-CE3D8C024BC1';
 
       vm.requestData = {};
-      vm.contactsListRaw =[];
+      vm.contactsListRaw = [];
+
+
+
                         //  {
                         //    "fullName":"Joel Boachie",
                         //    "phoneNumber":"267777830"
@@ -32,7 +35,7 @@
               groupId : vm.groupId,
               tokenId : vm.tokenId,
               contactsList : vm.contactsListRaw
-      }
+      };
 
       vm.saveContactsToGroup = saveContactsToGroup;
 

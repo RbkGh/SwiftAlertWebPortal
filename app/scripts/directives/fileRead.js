@@ -32,20 +32,27 @@ directive("fileRead", fileRead);
             )[0];
 
 
-            var data = XLSX.utils.sheet_to_json( workbook.Sheets[workbook.SheetNames[0]]);
-            //$scope.contactList = [];
-            //$scope.contactList = JSON.stringify(data);
-            console.info("JSON Data =\n\n"+JSON.stringify(data));
+
+            var data2 = XLSX.utils.sheet_to_json( workbook.Sheets[workbook.SheetNames[0]]);
+            var arrayOfContacts = data2;
+
+
+
+            console.info("JSON Data =\n\n"+JSON.stringify(data2));
             //$scope.opts.columnDefs = [];
-            var arrayOfContacts = JSON.stringify(data);
+
             var index;
-            for	(index = 0; index < arrayOfContacts.length; index++) {
-              $scope.contactsListRaw.push(arrayOfContacts[index]);
+            for	(index = 0; index < arrayOfContacts.length; index+=1) {
+
+            $scope.opts.push(arrayOfContacts[index]);
+
             }
-            headerNames.forEach(function (h) {
-              //$scope.opts.columnDefs.push({ field: h });
-              console.log("h="+h);
-            });
+
+            console.log('Full contacts object ='+JSON.stringify($scope.opts));
+            //headerNames.forEach(function (h) {
+            //$scope.opts.columnDefs.push({ field: h });
+            //  //console.log("h="+h);
+            //});
 
             //$scope.opts.data = data;
 
