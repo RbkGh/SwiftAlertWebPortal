@@ -20,8 +20,8 @@
         var deferred = $q.defer();
 
         $http.post(
-          //'http://swiftalertmain.dal.jelastic.vps-host.net/swiftalert/alertsms/v1/groups/contacts/add',
-          'http://localhost:8080/alertsms/v1/groups/contacts/add',
+          'http://swiftalertmain.dal.jelastic.vps-host.net/swiftalert/alertsms/v1/groups/contacts/add',
+          //'http://localhost:8080/alertsms/v1/groups/contacts/add',
           requestData,
           {
             headers: {
