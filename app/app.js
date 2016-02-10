@@ -16,7 +16,8 @@ var app = angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.grid'
+    'ui.grid',
+    'angular-loading-bar'
   ]);
 app.config(['$sceDelegateProvider', function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
