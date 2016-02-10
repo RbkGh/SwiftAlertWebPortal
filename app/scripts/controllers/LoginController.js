@@ -18,7 +18,6 @@
       vm.dataLoading = true;
       AuthService.Login(vm.userName,vm.password).then(
         function successCallBack(response){
-          NProgress.done();
           console.log("The response ="+JSON.stringify(response));
           if (response.status === '00') {
             $location.path('/main');
